@@ -7,37 +7,37 @@ export default function FeaturesPage() {
       id: 1,
       title: "TalentMatch AI",
       description: "Provides the ideal intern to the position required.",
-      img: "asset.png",
+      img: "talentMatch.png",
     },
     {
       id: 2,
       title: "SmartCon",
       description: "Creates digital contracts that connect all parties.",
-      img: "asset.png",
+      img: "smartCon.png",
     },
     {
       id: 3,
       title: "CV Builder",
       description: "Builds ATS-ready Curriculum Vitae for students.",
-      img: "asset.png",
+      img: "cvBuilder.png",
     },
     {
       id: 4,
       title: "ModRadar",
       description:
         "Allows institutions to actively track performance of deployed interns",
-      img: "asset.png",
+      img: "modRadar.png",
     },
   ];
   return (
     <>
       <section
         id="featuresPage"
-        className="w-full h-screen bg-[#F8F8F8] flex flex-col justify-start items-center gap-7"
+        className="w-full min-h-screen bg-[#F8F8F8] flex flex-col items-center gap-7 px-4 py-10"
       >
         <div className="flex flex-col items-center gap-3 text-[#2F2F2F]">
-          <p className="font-medium text-[#2F2F2F]">Features</p>
-          <h1 className="font-medium text-3xl">Internnook's Key Features</h1>
+          <span className="text-[#8E8E8E] text-sm mt-2 py-2">Features</span>
+          <h1 className="font-bold text-3xl">Internnook's Key Features</h1>
           <div className="text-wrap max-w-2xl text-center">
             <p className="font-light text-xl">
               Internnook connects students, companies, and schools through
@@ -48,18 +48,17 @@ export default function FeaturesPage() {
         </div>
 
         {/* cards */}
-        <div className="flex gap-4">
-          {cardData.map((data) => {
-            return (
-              <Cards
-                key={data.id}
-                title={data.title}
-                description={data.description}
-                img={data.img}
-              />
-            );
-          })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 w-full max-w-5xl mx-auto place-items-center">
+          {cardData.map((data) => (
+            <Cards 
+              key={data.id} 
+              title={data.title} 
+              description={data.description} 
+              img={data.img} 
+            />
+          ))}
         </div>
+
       </section>
     </>
   );
