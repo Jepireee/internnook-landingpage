@@ -20,7 +20,7 @@ export default function Navbar() {
     {
       id: 5,
       title: "Contact",
-      address: "ContactPage",
+      address: "contactPage",
     },
     {
       id: 4,

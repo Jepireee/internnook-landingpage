@@ -5,7 +5,7 @@ export default function HomePage() {
     <>
       <section
         id="homePage"
-        className="relative min-h-screen flex items-center justify-center bg-[#F8F8F8] px-6 lg:px-16 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center bg-[#F8F8F8] px-6 pt-20 lg:px-16 overflow-hidden"
       >
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
           <div className="absolute w-full h-full -z-10">
@@ -18,7 +18,14 @@ export default function HomePage() {
               <br className="hidden sm:inline" /> right at your nook.
             </h1>
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ">
-              <button className="bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("registerPage")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer"
+              >
                 Pre-Register Now
               </button>
               <button
