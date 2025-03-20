@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+import { useState } from "react";
 export default function Navbar() {
   const navData = [
     {
@@ -27,11 +28,14 @@ export default function Navbar() {
       address: "registerPage",
     },
   ];
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   return (
     <>
       <header className="fixed top-0 left-0 w-full h-16 bg-[#F8F8F8] z-50 shadow-md">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          <Link href="/">
+          <p>
             <a className="text-2xl font-bold text-blue-900">
               <img
                 src="/images/LOGO_blue_png.png"
@@ -39,7 +43,7 @@ export default function Navbar() {
                 className="w-55 h-8"
               />
             </a>
-          </Link>
+          </p>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-gray-700">
@@ -60,12 +64,15 @@ export default function Navbar() {
 
           {/* Hamburger Icon for Mobile */}
           <div className="md:hidden">
-            <button onClick={toggleSidebar} className="focus:outline-none">
+            <button
+              onClick={toggleSidebar}
+              className="focus:outline-none cursor-pointer"
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="4"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -103,7 +110,7 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <nav className="flex flex-col space-y-4 text-gray-700">
+          <nav className="flex flex-col space-y-4 text-gray-700 pt-10">
             {navData.map((data) => (
               <p
                 key={data.id}
