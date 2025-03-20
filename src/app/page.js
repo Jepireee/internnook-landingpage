@@ -6,6 +6,7 @@ import AboutPage from "./ui/pages/about";
 import HowItWorksPage from "./ui/pages/how-it-works";
 import FeaturesPage from "./ui/pages/features";
 import TaglinPages from "./ui/pages/taglines";
+import PreRegisterPage from "./ui/pages/pre-register";
 export default function Home() {
   return (
     <>
@@ -24,6 +25,8 @@ export default function Home() {
 
       {/* taglines */}
       <TaglinPages />
+
+      <PreRegisterPage />
     </>
   );
 }
