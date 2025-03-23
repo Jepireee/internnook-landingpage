@@ -9,8 +9,6 @@ export default function HomePage() {
       >
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
           <div className="absolute w-full h-full -z-10">
-            <div className="absolute w-56 h-56 bg-orange-200 rounded-full top-[10%] left-[-5%] lg:left-[-15%]"></div>
-            <div className="absolute w-72 h-72 bg-orange-300 rounded-full bottom-[5%] right-[-5%] lg:right-[-10%]"></div>
           </div>
           <div className="text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
@@ -38,14 +36,20 @@ export default function HomePage() {
               >
                 How it works?
               </button>
+              {/* circle */}
+              <div className="absolute top-25 -left-28 w-60 h-60 bg-orange-200 rounded-full hidden md:block z-0"></div>
             </div>
           </div>
-          <div className="relative flex justify-center ">
+          
+          <div className="absolute -top-1 -right-20 w-140 h-140 bg-orange-200 rounded-full hidden md:block z-0"></div>
+          <div className="relative flex justify-center  ">
+         
             <Image
               src="/images/CBM_HERO.png"
               alt="Internship Team"
               width={500}
               height={500}
+              quality={100}
               className="object-contain w-500 max-w-3xl h-auto sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]-mt-20 md:-mt-16 lg:-mt-2 "
             />
           </div>

@@ -79,8 +79,8 @@ export default function PreRegisterPage() {
           </div>
         </div>
         <div className="px-8 rounded-lg">
-          <div className="bg-[#F3F3F3] w-full h-full p-7 md:px-14 md:py-14">
-            <h1 className="font-bold text-2xl text-slate-400">Pre-register</h1>
+          <div className="bg-[#F3F3F3] w-full h-full p-7 py-3 md:px-14 md:py-14">
+            <h1 className="font-bold text-2xl text-slate-400 py-3">Pre-register</h1>
             <Image
               src="/images/LOGO_blue_png.png"
               width={281}
@@ -97,39 +97,39 @@ export default function PreRegisterPage() {
                 name="entry.1361204234"
                 type="text"
                 placeholder="Company Name"
-                className="w-full h-12 bg-white rounded-sm px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3 mt-5"
+                className="w-full h-12 bg-white rounded-md px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3 mt-5"
                 required
               />
               <input
                 name="entry.659408088"
                 type="text"
                 placeholder="Company Email"
-                className="w-full h-12 bg-white rounded-sm px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
+                className="w-full h-12 bg-white rounded-md px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
                 required
               />
               <input
                 name="entry.1318067195"
                 type="text"
                 placeholder="Company Address"
-                className="w-full h-12 bg-white rounded-sm px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
+                className="w-full h-12 bg-white rounded-md px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
                 required
               />
               <input
                 name="entry.1869060843"
                 type="text"
                 placeholder="Company Person"
-                className="w-full h-12 bg-white rounded-sm px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
+                className="w-full h-12 bg-white rounded-md px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
                 required
               />
               <input
                 name="entry.1688736167"
                 type="text"
                 placeholder="Company Number"
-                className="w-full h-12 bg-white rounded-sm px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
+                className="w-full h-12 bg-white rounded-md px-4 text-slate-900 font-semibold focus:outline-slate-600 mb-3"
                 required
               />
 
-              <button className="bg-blue-800 px-6 py-2 font-medium mt-14 cursor-pointer">
+              <button className="px-6 py-2 mt-14 bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer">
                 Pre-register Now
               </button>
             </form>
