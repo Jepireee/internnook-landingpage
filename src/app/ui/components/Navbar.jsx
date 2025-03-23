@@ -38,7 +38,7 @@ export default function Navbar() {
           <p>
             <a className="text-2xl font-bold text-blue-900">
               <img
-                src="/images/LOGO_blue_eyeglasses.png"
+                src="/images/Logo_blue_eyeglasses.png"
                 alt="Logo"
                 className="w-18 h-9"
               />
@@ -71,7 +71,7 @@ export default function Navbar() {
               <svg
                 className="w-6 h-6"
                 fill="none"
-                stroke="currentColor"
+                stroke="#135C9F"
                 strokeWidth="4"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
