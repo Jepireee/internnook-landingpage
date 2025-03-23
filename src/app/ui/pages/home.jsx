@@ -8,9 +8,8 @@ export default function HomePage() {
         className="relative min-h-screen flex items-center justify-center bg-[#F8F8F8] px-6 pt-20 lg:px-16 overflow-hidden"
       >
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto w-full">
-          <div className="absolute w-full h-full -z-10">
-          </div>
-          <div className="text-center lg:text-left">
+          <div className="absolute w-full h-full"></div>
+          <div className="text-center lg:text-left z-30">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
               Internship made easy,
               <br className="hidden sm:inline" /> right at your nook.
@@ -37,20 +36,19 @@ export default function HomePage() {
                 How it works?
               </button>
               {/* circle */}
-              <div className="absolute top-25 -left-28 w-60 h-60 bg-orange-200 rounded-full hidden md:block z-0"></div>
+              <div className="absolute top-25 -left-80 w-96 h-96 bg-orange-200 rounded-full hidden md:block -z-50"></div>
             </div>
           </div>
-          
+
           <div className="absolute -top-1 -right-20 w-140 h-140 bg-orange-200 rounded-full hidden md:block z-0"></div>
-          <div className="relative flex justify-center  ">
-         
+          <div className="relative flex justify-center items-center">
             <Image
               src="/images/CBM_HERO.png"
               alt="Internship Team"
               width={500}
               height={500}
               quality={100}
-              className="object-contain w-500 max-w-3xl h-auto sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]-mt-20 md:-mt-16 lg:-mt-2 "
+              className="object-contain w-500 max-w-3xl h-auto sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px] ml-10 md:-mt-16 lg:-mt-2 "
             />
           </div>
         </div>
