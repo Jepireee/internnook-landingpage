@@ -38,9 +38,9 @@ export default function Navbar() {
           <p>
             <a className="text-2xl font-bold text-blue-900">
               <img
-                src="/images/LOGO_blue_png.png"
+                src="/images/LOGO_blue_eyeglasses.png"
                 alt="Logo"
-                className="w-55 h-8"
+                className="w-18 h-9"
               />
             </a>
           </p>

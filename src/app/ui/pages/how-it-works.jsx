@@ -56,6 +56,7 @@ export default function HowItWorksPage() {
               alt="User Working"
               width={500}
               height={500}
+              quality={100}
               className="object-contain relative z-10"
             />
             {/* check */}
