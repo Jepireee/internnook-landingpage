@@ -44,10 +44,9 @@ export default function PreRegisterPage() {
     <>
       <section
         id="registerPage"
-<<<<
+
         className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7
-====
-         md:grid-cols-2 md:px-16 md:py-14"
+        md:grid-cols-2 md:px-16 md:py-14"
       >
         <div className="grid grid-cols-2 items-center">
           
@@ -73,7 +72,6 @@ export default function PreRegisterPage() {
                       className="w-12 h-12"
                     />
                   </div>
-``
                   <div className="bg-white h-14 -ml-2 flex justify-start items-center w-50 rounded-r-lg">
                     <p className="text-slate-700 font-semibold ml-5">
                     {data.description}

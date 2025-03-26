@@ -13,7 +13,7 @@ export default function TaglinPages() {
               width={400}
               height={500}
               quality={100}
-              className="rounded-xl object-cover w-full h-full"
+              className=" object-cover w-full h-full"
             />
           </div>
           <Image
@@ -34,7 +34,7 @@ export default function TaglinPages() {
           />
         </div>
         <div className=" p-6 lg:p-10  max-w-md">
-          <h2 className="text-4xl font-bold text-[#FD7201] mt-2 italic">
+          <h2 className="text-5xl font-bold text-[#FD7201] mt-2 italic">
             “where dream jobs take root!”
           </h2>
           <p className="text-gray-700 mt-4">
@@ -78,7 +78,7 @@ export default function TaglinPages() {
       
       {/* <div className="absolute bottom-40 right-0 w-70 h-70 bg-orange-200 rounded-full hidden md:block z-0"></div>  */}
       <div className="p-6 lg:p-10  max-w-md" >
-          <h2 className="italic text-4xl font-bold text-[#1F628E] mt-2">
+          <h2 className="italic text-5xl font-bold text-[#1F628E] mt-2">
             “the smart way to look!”
           </h2>
           <p className="text-gray-700 mt-2">
@@ -120,7 +120,7 @@ export default function TaglinPages() {
           />
         </div>
         <div className="p-6 lg:p-10  max-w-md">
-          <h2 className="text-4xl font-bold text-[#FD7201] mt-2 italic">
+          <h2 className="text-5xl font-bold text-[#FD7201] mt-2 italic">
           “where students find their nook!”{" "}
           </h2>
           <p className="text-gray-700 mt-4">

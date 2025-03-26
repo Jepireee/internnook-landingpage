@@ -41,11 +41,11 @@ export default function HowItWorksPage() {
                 <div className="flex items-center gap-6">
                   <span className="text-blue-600 font-bold text-lg">03</span>
                   <p className="text-gray-700 font-bold text-lg">
-                    Start Your JourneySign
+                    Start Your Journey
                   </p>
                 </div>
                 <p className="text-gray-700 mt-2 ml-12">
-                  Agreements digitally and begin your internship.
+                Sign Agreements digitally and begin your internship.
                 </p>
               </div>
             </div>
