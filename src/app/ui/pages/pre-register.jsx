@@ -28,11 +28,11 @@ export default function PreRegisterPage() {
                 data.id === 1 ? "-ml-4.5" : data.id === 3 ? "ml-2" : ""
               }`}
             >
-              <div className="bg-[#135C9F] w-16 h-16 flex justify-center items-center rounded-full z-40">
+              <div className="bg-[#135C9F] w-14 h-14 md:w-16 md:h-16 flex justify-center items-center rounded-full z-20">
                 <img
                   src={`/svg/${data.img}.svg`}
                   alt=""
-                  className="w-12 h-12"
+                  className="w-7 h-7 md:w-12 md:h-12 "
                 />
               </div>
               <div className="bg-white h-14 -ml-2 flex justify-start items-center w-50 rounded-r-lg">
@@ -46,8 +46,8 @@ export default function PreRegisterPage() {
       </div>
 
       {/* FORM */}
-      <div className="px-8 rounded-lg">
-        <div className="bg-[#F3F3F3] rounded-2xl w-full h-full p-7 py-3 md:px-14 md:py-14">
+      <div className=" rounded-lg">
+        <div className="bg-[#F3F3F3] rounded-2xl w-full h-full p-4 py-3 md:px-14 md:py-14">
           <h1 className="font-bold text-2xl text-slate-400 py-3">
             Pre-register
           </h1>
