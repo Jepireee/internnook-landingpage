@@ -9,7 +9,9 @@ export default function AboutPage() {
     <>
       <section
         id="aboutPage"
-        className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-25 bg-[#F8F8F8] relative"
+
+        className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-25 bg-[#FDCC99] relative"
+
       >
         {/* <div className="grid grid-cols-1 gap-4 w-full md:w-1/2 ">
           <div className="col-span-1 row-span-2">
@@ -47,16 +49,18 @@ export default function AboutPage() {
             width={400}
             height={500}
             quality={100}
-            className="rounded-xl object-cover w-full h-full relative z-10"
+            className="rounded-3xl shadow-xl object-cover w-full h-full relative z-10"
           />
         </div>
       </div>
 
 
         <div className="p-6 lg:p-10 max-w-md">
+
           <span className={`${poppins.className} text-gray-700 text-sm mt-2 py-2`}>About</span>
           <h2 className="italic text-4xl font-extrabold text-[#135C9F] mt-2">
             A Smart Internship
+
           </h2>
           <p className={`${poppins.className} text-gray-700 mt-2`}>
             that connects academic institutions, companies, and students

@@ -49,6 +49,7 @@ export default function HowItWorksPage() {
                 <hr className="my-6 border-[#C7C7C7]/[0.47] w-3/4" />
               </motion.div>
             ))}
+
           </div>
         </motion.div>
 
