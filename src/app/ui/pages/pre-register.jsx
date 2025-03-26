@@ -18,25 +18,48 @@ export default function PreRegisterPage() {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7 md:grid-cols-2 md:px-16 md:py-14">
-      <div className="grid grid-cols-2 items-center">
-        <Image src="/images/img_10.png" width={360} height={920} alt="latina" />
-        <div className="grid grid-cols-1 gap-9 lg:gap-20">
-          {iconData.map((data) => (
-            <div
-              key={data.id}
-              className={`flex justify-start items-center ${
-                data.id === 1 ? "-ml-4.5" : data.id === 3 ? "ml-2" : ""
-              }`}
-            >
-              <div className="bg-[#135C9F] w-16 h-16 flex justify-center items-center rounded-full z-40">
-                <img src={`/svg/${data.img}.svg`} alt="" className="w-12 h-12" />
-              </div>
-              <div className="bg-white h-14 -ml-2 flex justify-start items-center w-50 rounded-r-lg">
-                <p className="text-slate-700 font-semibold ml-5">{data.description}</p>
-              </div>
-            </div>
-          ))}
+
+    <>
+      <section
+        id="registerPage"
+
+        className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7
+        md:grid-cols-2 md:px-16 md:py-14"
+      >
+        <div className="grid grid-cols-2 items-center">
+          
+          <Image
+            src="/images/img_10.png"
+            width={360}
+            height={920}
+            alt="latina"
+          />
+          <div className="grid grid-cols-1 gap-9 lg:gap-20">
+            {iconData.map((data) => {
+              return (
+                <div
+                  key={data.id}
+                  className={`flex justify-start items-center ${
+                    data.id === 1 ? "-ml-4.5" : data.id === 3 ? "ml-2" : ""
+                  }`}
+                >
+                  <div className="bg-[#135C9F] w-16 h-16 flex justify-center items-center rounded-full z-40">
+                    <img
+                      src={`/svg/${data.img}.svg`}
+                      alt=""
+                      className="w-12 h-12"
+                    />
+                  </div>
+                  <div className="bg-white h-14 -ml-2 flex justify-start items-center w-50 rounded-r-lg">
+                    <p className="text-slate-700 font-semibold ml-5">
+                    {data.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
         </div>
       </div>
 
