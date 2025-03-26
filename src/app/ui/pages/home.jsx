@@ -1,78 +1,104 @@
 "use client";
 import Image from "next/image";
+import { Anton } from "next/font/google";
+import { motion } from "framer-motion";
+
+const anton = Anton({ subsets: ["latin"], weight: "400" });
 
 export default function HomePage() {
   return (
+    <>
+      <section
+        id="homePage"
+        className="relative min-h-screen flex items-center justify-center bg-[#F8F8F8] px-6 pt-20 lg:px-16 overflow-hidden"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="flex items-center justify-center h-screen w-full"
+        >
+          <div className="relative max-w-7xl mx-auto w-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className={`${anton.className} font-extrabold text-[#135C9F] uppercase leading-none text-3xl sm:text-5xl md:text-9xl space-y-4 text-center`}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="flex flex-wrap items-center justify-center gap-2 sm:gap-4"
+              >
+                <h1>INTERNSHIP</h1>
+                <div className="w-[4.3em] h-[1em] bg-[url('/images/Hero.png')] bg-cover bg-center shadow-2xl"></div>
+              </motion.div>
 
-    <section id="homePage" className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 pt-20 lg:px-16 sm:py-16 bg-[#FFFFFF]">
-      <div className="relative max-w-7xl mx-auto w-full">
-        <div className="font-extrabold text-[#135C9F] uppercase leading-none text-3xl sm:text-5xl md:text-7xl">
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-            <h1>INTERNSHIP</h1>
-            <Image
-              src="/images/Hero.png"
-              alt="Eye"
-              width={140}
-              height={80}
-              quality={100}
-              className="w-[80px] sm:w-[130px] md:w-[160px] h-auto rounded-md shadow-md"
-            />
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.7 }}
+                className="flex flex-wrap items-center justify-center gap-2 sm:gap-4"
+              >
+                <div className="w-[4em] h-[1em] bg-[url('/images/Hero1.png')] bg-cover bg-center shadow-md"></div>
+                <h1>
+                  MADE <span className="text-[#FE7E00]">EASY,</span>
+                </h1>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.9 }}
+                className="flex flex-wrap items-center justify-center gap-2 sm:gap-4"
+              >
+                <h1>RIGHT AT YOUR NOOK</h1>
+                <div className="w-[1em] h-[1em] bg-[url('/images/Hero2.png')] bg-cover bg-center shadow-md"></div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="mt-6 flex flex-col items-center sm:items-center text-center sm:text-center"
+            >
+              <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <p className="text-[#135C9F] text-base sm:text-lg max-w-lg text-left sm:mr-[4em] md:mr-[8em]">
+                  Bridges the gap between students, companies, and schools to
+                  create successful internship experiences.
+                </p>
+
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                  onClick={() =>
+                    document.getElementById("worksPage")?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-xl hover:bg-orange-500 hover:text-white transition"
+                >
+                  How it Works?
+                </motion.button>
+
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1.4 }}
+                  onClick={() =>
+                    document.getElementById("registerPage")?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="bg-[#135C9F] text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition"
+                >
+                  Pre-Register Now
+                  <span className="text-xl">→</span>
+                </motion.button>
+              </div>
+            </motion.div>
           </div>
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-
-            <Image
-              src="/images/Hero1.png"
-              alt="Students"
-              width={160}
-              height={100}
-              quality={100}
-
-              className="w-[100px] sm:w-[150px] md:w-[180px] h-auto rounded-md shadow-md"
-
-           
-
-            />
-            <h1>MADE <span className="text-[#FE7E00]">EASY,</span></h1>
-          </div>
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-            <h1>RIGHT AT YOUR NOOK</h1>
-            <Image
-              src="/images/Hero2.png"
-              alt="Office"
-              width={100}
-              height={60}
-              className="w-[70px] sm:w-[90px] md:w-[110px] h-auto rounded-md shadow-md"
-            />
-          </div>
-        </div>
-        <div className="mt-6 flex flex-col items-center sm:items-start text-center sm:text-left">
-          <div className="mt-4 flex flex-col sm:flex-row gap-4">
-            <p className="text-[#135C9F] text-base sm:text-lg max-w-lg">
-            Bridges the gap between students, companies, and schools to create successful internship experiences.
-          </p>
-            <button 
-            onClick={() => {
-              document
-                .getElementById("worksPage")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-sm hover:bg-orange-500 hover:text-white transition">
-              How it Works?
-            </button>
-            <button 
-            onClick={() => {
-              document
-                .getElementById("registerPage")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="bg-[#135C9F] item-center text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-md flex items-center gap-2 hover:bg-blue-800 transition">
-              Pre-Register Now
-              <span className="text-xl">→</span>
-              
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </section>
+    </>
   );
 }

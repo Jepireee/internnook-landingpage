@@ -6,7 +6,9 @@ export default function AboutPage() {
     <>
       <section
         id="aboutPage"
+
         className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-25 bg-[#FDCC99] relative"
+
       >
         {/* <div className="grid grid-cols-1 gap-4 w-full md:w-1/2 ">
           <div className="col-span-1 row-span-2">
