@@ -4,12 +4,8 @@ import { useState } from "react";
 export default function PreRegisterPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [role, setRole] = useState(""); // Dropdown state
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsSubmitted(true);
-    setRole(""); // Reset dropdown selection
-  };
+  const [scchool_id, setschool_id] = useState(""); // Dropdown state
+  const [Year_lvl,setYear_lvl] = useState("");
 
   const iconData = [
     { id: 1, img: "work", description: "Access to Fresh Talents" },
@@ -54,49 +50,135 @@ export default function PreRegisterPage() {
             onChange={(e) => setRole(e.target.value)}
           >
             <option value="">Select Role</option>
-            <option value="intern">Intern</option>
-            <option value="coordinator">Coordinator</option>
+            <option value="student">Student</option>
             <option value="company">Company</option>
           </select>
 
-          {/* Company Form - Only Shows When 'Company' is Selected */}
-          {role === "company" && (
-            <div className="mt-4">
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
-              />
-              <input
-                type="email"
-                placeholder="Company Email"
-                className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
-              />
-              <input
-                type="text"
-                placeholder="Company Address"
-                className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
-              />
-              <input
-                type="text"
-                placeholder="Contact Person"
-                className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
-              />
-              <input
-                type="number"
-                placeholder="Contact Number"
-                className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
-              />
-            </div>
-          )}
-
-          {/* Submit Button */}
-          <button
-            onClick={handleSubmit}
-            className="mt-6 bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer w-full"
+          {/* FORM STARTS HERE */}
+          <form
+            action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSfDi7cmdoYhuU5S1r2KNHgSmBTH6-TBxSYBjt_pXbZw362aFA/formResponse"
+            method="POST"
+            target="_blank"
+            onSubmit={() => setIsSubmitted(true)} // Show success message after submission
           >
-            Pre-register Now
-          </button>
+            {/* Company Form - Only Shows When 'Company' is Selected */}
+            {role === "company" && (
+              <div className="mt-4">
+                <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="Company Name"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                />
+                <input
+                  name="entry.659408088"
+                  type="email"
+                  placeholder="Company Email"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                />
+                <input
+                  name="entry.1318067195"
+                  type="text"
+                  placeholder="Company Address"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                />
+                <input
+                  name="entry.1869060843"
+                  type="text"
+                  placeholder="Contact Person"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                />
+                <input
+                  name="entry.1688736167"
+                  type="text"
+                  placeholder="Contact Number"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                />
+              </div>
+            )}
+
+            {/* Student Form */}
+            {role === "student" && (
+              <div className="mt-5">
+          <select
+            id="school_id"
+            className="w-full p-3 border rounded-md mt-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            value={scchool_id}
+            onChange={(e) => setschool_id(e.target.value)}
+          >
+            <option value="">Select School</option>
+            <option value="student">NCF</option>
+          </select>
+                <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="First Name"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+                  <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="Course"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+           <select
+            id="Year_lvl"
+            className="w-full p-3 border rounded-md mt-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700"
+            value={Year_lvl}
+            onChange={(e) => setYear_lvl(e.target.value)}
+          >
+            <option value="">Year Level </option>
+            <option value="1styr">1st Year</option>
+            <option value="2ndyr">2nd Year</option>
+            <option value="3rdyr">3rd Year</option>
+            <option value="4thyr">4th Year</option>
+          </select>
+          <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="School Email"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+          <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="Current Town"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+          <input
+                  name="entry.1361204234"
+                  type="number"
+                  placeholder="Contact Number"
+                  className="w-full p-3 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+          <input
+                  name="entry.1361204234"
+                  type="text"
+                  placeholder="Target Industry"
+                  className="w-full p-10 border rounded-md mt-2 bg-white text-gray-700"
+                  required
+                  />
+           </div>
+            )}
+
+            {/* Submit Button (Now Inside the Form) */}
+            <button
+              type="submit"
+              className="mt-6 bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer w-full"
+            >
+              Pre-register Now
+            </button>
+          </form>
         </div>
       </div>
 
