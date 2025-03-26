@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function AboutPage() {
   return (
@@ -51,11 +54,11 @@ export default function AboutPage() {
 
 
         <div className="p-6 lg:p-10 max-w-md">
-          <span className="text-[#8E8E8E] text-sm mt-2 py-2">About</span>
+          <span className={`${poppins.className} text-gray-700 text-sm mt-2 py-2`}>About</span>
           <h2 className="italic text-4xl font-extrabold text-[#135C9F] mt-2">
             A Smart Internship
           </h2>
-          <p className="text-gray-700 mt-2">
+          <p className={`${poppins.className} text-gray-700 mt-2`}>
             that connects academic institutions, companies, and students
             seamlessly.
           </p>
