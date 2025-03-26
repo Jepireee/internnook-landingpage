@@ -1,5 +1,10 @@
 "use client";
 import { useState } from "react";
+
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+
 export default function Navbar() {
   const navData = [
     {
@@ -36,7 +41,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full h-16 bg-[#FFFFFF] z-50 shadow-md">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <p>
-            <a className="text-2xl font-bold text-blue-900">
+            <a className={`${poppins.className} text-2xl font-bold text-blue-900`}>
               <img
                 src="/images/Logo_blue_eyeglasses.png"
                 alt="Logo"
@@ -50,7 +55,7 @@ export default function Navbar() {
             {navData.map((data) => (
               <p
                 key={data.id}
-                className="hover:text-blue-600 cursor-pointer"
+                className={`${poppins.className} hover:text-blue-600 cursor-pointer`}
                 onClick={() => {
                   document.getElementById(`${data.address}`)?.scrollIntoView({
                     behavior: "smooth",
