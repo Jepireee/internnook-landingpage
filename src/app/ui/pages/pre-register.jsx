@@ -44,7 +44,7 @@ export default function PreRegisterPage() {
     <>
       <section
         id="registerPage"
-<<<<
+
         className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7
 ====
          md:grid-cols-2 md:px-16 md:py-14"
