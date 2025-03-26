@@ -7,6 +7,7 @@ import HowItWorksPage from "./ui/pages/how-it-works";
 import FeaturesPage from "./ui/pages/features";
 import TaglinPages from "./ui/pages/taglines";
 import FeedbackPage from "./ui/pages/feedback";
+import SuggestionPage from "./ui/pages/suggestion";
 
 import PreRegisterPage from "./ui/pages/pre-register";
 import Footer from "./ui/components/Footer";
@@ -36,6 +37,10 @@ export default function Home() {
       {/* Pre Registration */}
 
       <PreRegisterPage />
+
+      {/* Suggestion */}
+      <SuggestionPage/>
+
       <Footer />
     </>
   );

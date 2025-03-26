@@ -8,22 +8,22 @@ const testimonials = [
       text: "Internnook makes finding internships so much easier. It connects students with the right companies without the hassle. The platform is simple to use and does a great job of bridging the gap between interns and companies.",
     },
     {
-      name: "Fatima",
-      role: "Marketing Intern",
-      image: "/images/Avatar 3.jpg",
+      name: "Jeffrey",
+      role: "Programmer Intern",
+      image: "/images/Avatar 2.jpg",
       text: "What I love about Internnook is how easy it makes the internship search process. It’s a one-stop platform where students can quickly find opportunities with trusted companies, saving time and effort.",
     },
     {
       name: "Dian Kristine",
-      role: "Marketing Intern",
-      image: "/images/Avatar 2.jpg",
+      role: "Programmer Intern",
+      image: "/images/Avatar 3.jpg",
       text: "Thanks to Internnook, I found an internship that perfectly matched my field of study. The process was smooth, and it saved me a lot of time and effort.                                                          ",
     },
 ];
 export default function Feeback() {
     return (
         <>
-            <section id="feedbackPage" className="py-16 text-center bg-[#F8F8F8]">
+            <section id="feedbackPage" className="py-16 text-center bg-[#FFFFFF]">
                 <span className="text-[#8E8E8E] text-sm mt-2 py-2">
                     Feedback
                 </span>
