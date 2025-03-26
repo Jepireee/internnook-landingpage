@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
+
     <section id="homePage" className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 pt-20 lg:px-16 sm:py-16 bg-[#FFFFFF]">
       <div className="relative max-w-7xl mx-auto w-full">
         <div className="font-extrabold text-[#135C9F] uppercase leading-none text-3xl sm:text-5xl md:text-7xl">
@@ -18,13 +19,18 @@ export default function HomePage() {
             />
           </div>
           <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+
             <Image
               src="/images/Hero1.png"
               alt="Students"
               width={160}
               height={100}
               quality={100}
+
               className="w-[100px] sm:w-[150px] md:w-[180px] h-auto rounded-md shadow-md"
+
+           
+
             />
             <h1>MADE <span className="text-[#FE7E00]">EASY,</span></h1>
           </div>

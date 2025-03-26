@@ -44,7 +44,9 @@ export default function PreRegisterPage() {
     <>
       <section
         id="registerPage"
+<<<<
         className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7
+====
          md:grid-cols-2 md:px-16 md:py-14"
       >
         <div className="grid grid-cols-2 items-center">
@@ -82,9 +84,12 @@ export default function PreRegisterPage() {
             })}
           </div>
         </div>
+
         <div className="px-8 rounded-lg">
           <div className="bg-[#F3F3F3] rounded-2xl w-full h-full p-7 py-3 md:px-14 md:py-14">
             <h1 className="font-bold text-2xl text-slate-400 py-3">Pre-register</h1>
+
+        
             <Image
               src="/images/LOGO_blue_png.png"
               width={281}
@@ -133,7 +138,7 @@ export default function PreRegisterPage() {
                 required
               />
 
-              <button className="px-6 py-2 mt-14 bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer">
+              <button className=" mt-14 bg-[#135C9F] text-white px-6 py-3 rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer">
                 Pre-register Now
               </button>
             </form>
