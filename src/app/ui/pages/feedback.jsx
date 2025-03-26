@@ -15,7 +15,7 @@ const testimonials = [
     },
     {
       name: "Dian Kristine",
-      role: "Programmer Intern",
+      role: "Marketing Intern",
       image: "/images/Avatar 3.jpg",
       text: "Thanks to Internnook, I found an internship that perfectly matched my field of study. The process was smooth, and it saved me a lot of time and effort.                                                          ",
     },
