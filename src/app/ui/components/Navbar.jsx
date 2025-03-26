@@ -33,7 +33,7 @@ export default function Navbar() {
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-16 bg-[#F8F8F8] z-50 shadow-md">
+      <header className="fixed top-0 left-0 w-full h-16 bg-[#FFFFFF] z-50 shadow-md">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <p>
             <a className="text-2xl font-bold text-blue-900">
