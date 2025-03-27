@@ -15,13 +15,12 @@ export default function AboutPage() {
       >
         {/* Image Placeholder with Pop-in Effect */}
         <motion.div
-          className="grid grid-cols-1 gap-4 w-full md:w-1/2 bg-[url('/images/IMG_5.jpg')] bg-cover bg-center h-[50vh] flex items-center justify-center rounded-2xl"
+          className="grid grid-cols-1 gap-4 w-full md:w-1/2 bg-[url('/images/IMG_5.JPG')] bg-cover bg-center h-[50vh]  items-center justify-center rounded-2xl"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-        >
-        </motion.div>
+        ></motion.div>
 
         {/* Animated Text Content */}
         <motion.div
@@ -31,11 +30,14 @@ export default function AboutPage() {
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h2 className={`${anton.className} text-8xl font-extrabold text-[#FBEFB3] mt-2 text-left`}>
+          <h2
+            className={`${anton.className} text-8xl font-extrabold text-[#FBEFB3] mt-2 text-left`}
+          >
             A Smart Internship Hub
           </h2>
           <p className={`${poppins.className} text-[#FBEFB3] mt-2 text-left`}>
-            that connects academic institutions, companies, and students seamlessly.
+            that connects academic institutions, companies, and students
+            seamlessly.
           </p>
         </motion.div>
       </section>
