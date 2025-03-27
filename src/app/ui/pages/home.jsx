@@ -45,7 +45,7 @@ export default function HomePage() {
               >
                 <div className="w-[4em] h-[1em] bg-[url('/images/Hero1.png')] bg-cover bg-center shadow-2xl"></div>
                 <h1>
-                  MADE <span className="text-[#FE7E00]">EASY,</span>
+                  MADE <span className="text-[#F96D22]">EASY,</span>
                 </h1>
               </motion.div>
 
@@ -83,7 +83,7 @@ export default function HomePage() {
                       .getElementById("worksPage")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className={`${poppins.className} border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-xl hover:bg-orange-500 hover:text-white transition`}
+                  className={`${poppins.className} border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-3xl text-base sm:text-lg font-semibold shadow-xl hover:bg-orange-500 hover:text-white transition`}
                 >
                   How it Works?
                 </motion.button>
@@ -97,7 +97,7 @@ export default function HomePage() {
                       .getElementById("registerPage")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className={` ${poppins.className} bg-[#135C9F] text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition`}
+                  className={` ${poppins.className} bg-[#135C9F] text-white px-6 py-3 rounded-3xl text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition`}
                 >
                   Pre-Register Now
                   <span className="text-xl">→</span>

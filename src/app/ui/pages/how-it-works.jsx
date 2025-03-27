@@ -9,7 +9,7 @@ export default function HowItWorksPage() {
     <>
     <section
       id="worksPage"
-      className="relative flex items-center justify-center bg-[#FFFFFF] px-6 lg:px-16 py-20 overflow-hidden"
+      className="relative flex items-center justify-center bg-[#FEFEFE] px-6 lg:px-16 py-20 overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
         <motion.div
