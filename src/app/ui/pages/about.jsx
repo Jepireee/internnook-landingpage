@@ -1,72 +1,43 @@
 "use client";
-import Image from "next/image";
 import { Poppins } from "next/font/google";
+import { Anton } from "next/font/google";
+import { motion } from "framer-motion";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+const anton = Anton({ subsets: ["latin"], weight: "400" });
 
 export default function AboutPage() {
   return (
     <>
       <section
         id="aboutPage"
-
-        className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-25 bg-[#FDCC99] relative"
-
+        className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-25 bg-[url('/images/Gradient.png')] bg-cover bg-center relative"
       >
-        {/* <div className="grid grid-cols-1 gap-4 w-full md:w-1/2 ">
-          <div className="col-span-1 row-span-2">
-            <Image
-              src="/images/image 0.png"
-              alt="Person with Laptop"
-              width={400}
-              height={500}
-              quality={100}
-              className="rounded-xl object-cover w-full h-full relative z-10"
-            />
-          </div>
-          <Image
-            src="/images/IMG_12.JPG"
-            alt="Tablet Screen"
-            width={200}
-            height={200}
-            quality={100}
-            className="rounded-xl object-cover w-full h-full relative z-10"
-          />
-          <Image
-            src="/images/image 01.png"
-            alt="Team Discussion"
-            width={200}
-            height={200}
-            quality={100}
-            className="rounded-xl object-cover w-full h-full relative z-10"
-          />
-        </div> */}
-        <div className="grid grid-cols-1 gap-4 w-full md:w-1/2">
-        <div className="col-span-1 row-span-2">
-          <Image
-            src="/images/IMG_12.JPG"
-            alt="Tablet Screen"
-            width={400}
-            height={500}
-            quality={100}
-            className="rounded-3xl shadow-xl object-cover w-full h-full relative z-10"
-          />
-        </div>
-      </div>
+        {/* Image Placeholder with Pop-in Effect */}
+        <motion.div
+          className="grid grid-cols-1 gap-4 w-full md:w-1/2 bg-[url('/images/IMG_5.jpg')] bg-cover bg-center h-[50vh] flex items-center justify-center rounded-2xl"
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+        </motion.div>
 
-
-        <div className="p-6 lg:p-10 max-w-md">
-
-          <span className={`${poppins.className} text-gray-700 text-sm mt-2 py-2`}>About</span>
-          <h2 className="italic text-4xl font-extrabold text-[#135C9F] mt-2">
-            A Smart Internship
-
+        {/* Animated Text Content */}
+        <motion.div
+          className="p-6 lg:p-10 max-w-md"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h2 className={`${anton.className} text-8xl font-extrabold text-[#FBEFB3] mt-2 text-left`}>
+            A Smart Internship Hub
           </h2>
-          <p className={`${poppins.className} text-gray-700 mt-2`}>
-            that connects academic institutions, companies, and students
-            seamlessly.
+          <p className={`${poppins.className} text-[#FBEFB3] mt-2 text-left`}>
+            that connects academic institutions, companies, and students seamlessly.
           </p>
-        </div>
+        </motion.div>
       </section>
     </>
   );

@@ -16,7 +16,7 @@ export default function PreRegisterPage() {
   return (
     <section
       id="registerPage"
-      className="bg-[#FFFFFF] w-full grid gap-10 py-5 px-7 md:grid-cols-2 md:px-16 md:py-14"
+      className="bg-[#FEFEFE] w-full grid gap-10 py-5 px-7 md:grid-cols-2 md:px-16 md:py-14"
     >
       <div className="grid grid-cols-2 items-center">
         <Image src="/images/img_10.png" width={360} height={920} alt="latina" />

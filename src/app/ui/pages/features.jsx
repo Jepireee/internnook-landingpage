@@ -4,7 +4,7 @@ import Image from "next/image";
 import Cards from "../components/Cards";
 import { Poppins } from "next/font/google";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function FeaturesPage() {
   const cardData = [
@@ -38,13 +38,10 @@ export default function FeaturesPage() {
   return (
     <section
       id="featuresPage"
-      className="w-full min-h-screen bg-[#FFFFFF] flex flex-col items-center gap-7 px-4 py-15 relative overflow-hidden"
+      className="w-full min-h-screen bg-[url('/images/Gradient_1.png')] bg-cover bg-center relative flex flex-col items-center gap-7 px-4 py-20 relative overflow-hidden"
     >
-      <div className="flex flex-col items-center gap-3 text-[#2F2F2F] relative z-10">
-        <span className={`${poppins.className} text-[#8E8E8E] text-sm mt-2 py-2`}>
-          Features
-        </span>
-        <h2 className={`${poppins.className} text-2xl md:text-3xl font-bold text-gray-900 mt-2`}>
+      <div className="flex flex-col items-center gap-3 text-white relative z-10">
+        <h2 className={`${poppins.className} text-2xl md:text-3xl font-bold text-white mt-2`}>
           Internnook Feature's
         </h2>
         <div className="text-wrap max-w-2xl text-center">
