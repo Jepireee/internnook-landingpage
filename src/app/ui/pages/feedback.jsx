@@ -27,9 +27,6 @@ export default function Feeback() {
     return (
         <>
             <section id="feedbackPage" className="py-16 text-center bg-[#FFFFFF]">
-                <span className={`${poppins.className} text-[#8E8E8E] text-sm mt-2 py-2`}>
-                    Feedback
-                </span>
                 <h2 className={`${poppins.className} text-2xl md:text-3xl font-bold text-gray-900 mt-2`}>
                     We've built trust with <br className="hidden sm:inline" />  reviews from real users
                 </h2>

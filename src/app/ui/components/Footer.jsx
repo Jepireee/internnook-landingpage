@@ -1,3 +1,7 @@
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400","500"] });;
+
 export default function Footer() {
   return (
     <>
@@ -9,23 +13,23 @@ export default function Footer() {
               alt="Internnook Logo"
               className="h-8 mb-2 mx-auto md:mx-0"
             />
-            <p className="text-sm">
+            <p className={`${poppins.className} text-sm`}>
               Internship made easy, <br /> right at your nook.
             </p>
           </div>
           <div className="md:w-1/3">
             <h4 className="font-semibold text-[#135C9F]">Office</h4>
-            <p className="text-sm">
+            <p className={`${poppins.className} text-sm`}>
             NCF Tigre-TBI 3F Admin Bldg. Naga College Foundation Inc., MT.  
             Villanueva, Liboton Naga City, Philippines.
             </p>
           </div>
           <div className="md:w-1/3">
-            <h4 className="font-semibold text-[#135C9F]">Contact</h4>
-            <p className="text-sm">(+63) 9482650912</p>
+            <h4 className={`${poppins.className} font-semibold text-[#135C9F]`}> Contact</h4>
+            <p className={`${poppins.className} text-sm`}>hello@internnook.com</p>
           </div>
           <div className="md:w-1/3">
-            <h4 className="font-semibold text-[#135C9F]">Follow us</h4>
+            <h4 className={`${poppins.className} font-semibold text-[#135C9F]`}>Follow us</h4>
             <div className="flex justify-center md:justify-start gap-4 mt-2">
               <a
                 href="https://www.facebook.com/ncftigretbi"
@@ -51,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="text-center text-sm text-gray-500 mt-20">
+        <div className= {`${poppins.className} text-center text-sm text-gray-500 mt-15`}>
             © 2025, Internnook. All rights reserved.
           </div>
       </footer>
