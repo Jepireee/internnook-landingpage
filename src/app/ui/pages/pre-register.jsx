@@ -27,74 +27,31 @@ export default function PreRegisterPage() {
         console.log("Something went wrong");
       });
   };
-
-
-  const iconData = [
-    {
-      id: 1,
-      img: "work",
-      description: "Access to Fresh Talents"
-    },
-    {
-      id: 2,
-      img: "computer",
-      description: "Cost-Effective Workforce"
-    },
-    {
-      id: 3,
-      img: "ai",
-      description: "Future Talent Pipeline"
-    },
-  ];
-
   return (
     <section
       id="registerPage"
       className="bg-[#FEFEFE] w-full grid gap-10 py-5 px-7 md:grid-cols-2 md:px-16 md:py-14"
     >
-      <div className="flex flex-col md:flex-row items-start">
-        <div className="w-[360px] h-[500px] flex justify-center items-center flex-shrink-0">
+      <div className="py-20 flex flex-col md:flex-row items-start">
+        <div className="flex justify-center items-center flex-shrink-0">
           <Image 
-            src="/images/img_10.png" 
-            width={360} 
-            height={500} 
+            src="/images/IMG_19.JPG" 
+            width={400} 
+            height={500}
+            quality={100}
             alt="latina" 
-            className="object-cover w-full h-full"
+            className="rounded-lg shadow-md object-cover w-full h-full"
           />
-        </div>
-        <div className="flex flex-col gap-9 lg:gap-20 flex-grow">
-          {iconData.map((data) => (
-            <div
-              key={data.id}
-              className={`flex justify-start items-center ${
-                data.id === 1 ? "-ml-4.5" : data.id === 3 ? "ml-2" : ""
-              }`}
-            >
-              <div className="bg-[#135C9F] w-14 h-14 md:w-16 md:h-16 flex justify-center items-center rounded-full z-20">
-                <img
-                  src={`/svg/${data.img}.svg`}
-                  alt=""
-                  className="w-7 h-7 md:w-12 md:h-12"
-                />
-              </div>
-              <div className="bg-white h-14 -ml-2 flex justify-start items-center w-50 rounded-r-lg">
-                <p className={`${poppins.className} font-semibold text-[#135C9F] text-slate-700 ml-5`}>
-                  {data.description}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
-
-      <div className="px-8 rounded-lg">
-        <div className="rounded-2xl w-full h-full p-7 md:px-14 md:py-14">
-          <h2 className={`${poppins.className} font-bold text-2xl text-slate-400 py-3 `}>Pre-register</h2>
-          <Image src="/images/LOGO_blue_png.png" 
-            width={281} 
-            height={53} 
-            alt="logo" 
-          />
+      <div className="py-15 px-8 rounded-lg">
+        <div className="rounded-2xl w-full h-full  md:px-14 md:py-14">
+          <h2 className={`${poppins.className} text-[#135C9F] text-2xl sm:text-3xl font-bold`}>
+            Pre-Register for Internship Opportunities!
+          </h2>
+          <p className={`${poppins.className} text-[#135C9F] font-semibold text-sm sm:text-base mt-1 `}>
+            Explore opportunities that match your passion and skills!
+          </p>
           <div className="relative">
             <select onChange={(e) => setUserType(e.target.value)} 
               className={`${poppins.className} w-full p-4 border border-gray-300 border rounded-md mt-8 bg-white 

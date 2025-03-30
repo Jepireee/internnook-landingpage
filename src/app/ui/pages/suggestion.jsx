@@ -75,7 +75,7 @@ export default function SuggestionPage() {
             width={500}
             height={350}
             quality={100}
-            className="rounded-lg shadow-md w-full max-w-lg"
+            className="rounded-2xl shadow-md w-full max-w-lg"
           />
         </div>
       </div>
