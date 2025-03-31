@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400","500"] });
 
 export default function SuggestionPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -37,10 +40,10 @@ export default function SuggestionPage() {
               className="w-18 h-9"
             />
           </div>
-          <h2 className="text-[#135C9F] text-2xl sm:text-3xl font-bold">
+          <h2 className={`${poppins.className} text-[#135C9F] text-2xl sm:text-3xl font-bold`}>
             Want us to be at your nook?
           </h2>
-          <p className="text-[#135C9F] font-semibold text-sm sm:text-base mt-1">
+          <p className={`${poppins.className} text-[#135C9F] font-semibold text-sm sm:text-base mt-1 `}>
             Suggest your school and bring internships closer to you!
           </p>
           <form
@@ -52,21 +55,14 @@ export default function SuggestionPage() {
             <input
               name="entry.1595104939"
               type="text"
-              placeholder="University"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#135C9F]"
+              placeholder="Institution"
+              className= {`${poppins.className} w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#135C9F]`}
               required
             />
-
-            {/* <input
-                        name="entry.317265695"
-                        type="email"
-                        placeholder="Email"
-                        className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#135C9F]"
-                        required/> */}
-
             <button
               type="submit"
-              className="px-6 py-2 mt-5 bg-[#135C9F] text-white rounded-md text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer"
+              className={`${poppins.className} mt-8 bg-[#135C9F] text-white px-6 py-3 rounded-md 
+                text-sm font-medium shadow-md hover:bg-blue-700 cursor-pointer`}
             >
               Submit
             </button>
@@ -79,7 +75,7 @@ export default function SuggestionPage() {
             width={500}
             height={350}
             quality={100}
-            className="rounded-lg shadow-md w-full max-w-lg"
+            className="rounded-2xl shadow-md w-full max-w-lg"
           />
         </div>
       </div>
@@ -87,13 +83,13 @@ export default function SuggestionPage() {
       {isSubmitted && (
         <div className="fixed inset-0 flex items-center justify-center">
           <div className="bg-white p-6 shadow-lg rounded-lg border border-gray-300 text-center relative">
-            <h3 className="text-lg font-semibold text-green-600">Success!</h3>
-            <p className="mt-2 text-gray-700">
+            <h3 className={`${poppins.className} text-lg font-semibold text-green-600`}>Success!</h3>
+            <p className={`${poppins.className} mt-2 text-gray-700 `}>
               Your suggestion has been successfully submitted.
             </p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+              className={`${poppins.className} mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg`}
             >
               Close
             </button>

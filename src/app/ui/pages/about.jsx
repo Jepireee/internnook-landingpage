@@ -15,7 +15,7 @@ export default function AboutPage() {
       >
         {/* Image Placeholder with Pop-in Effect */}
         <motion.div
-          className="grid grid-cols-1 gap-4 w-full md:w-1/2 bg-[url('/images/IMG_5.JPG')] bg-cover bg-center h-[50vh]  items-center justify-center rounded-2xl"
+          className="grid grid-cols-1 gap-4 w-full md:w-1/2 bg-[url('/images/IMG_12.JPG')] bg-cover bg-center w-[90] h-[70vh]  items-center justify-center rounded-2xl"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
