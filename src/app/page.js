@@ -5,7 +5,7 @@ import HomePage from "./ui/pages/home";
 import AboutPage from "./ui/pages/about";
 import HowItWorksPage from "./ui/pages/how-it-works";
 import FeaturesPage from "./ui/pages/features";
-import TaglinPages from "./ui/pages/taglines";
+import TaglinePages from "./ui/pages/taglines";
 import FeedbackPage from "./ui/pages/feedback";
 import SuggestionPage from "./ui/pages/suggestion";
 
@@ -16,29 +16,21 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* Homepage */}
+      
       <HomePage />
 
-      {/* AboutPage */}
       <AboutPage />
-
-      {/* How it Works? */}
+      
       <HowItWorksPage />
-
-      {/* features */}
+      
       <FeaturesPage />
+      
+      <TaglinePages />
 
-      {/* taglines */}
-      <TaglinPages />
-
-      {/* feeback */}
       <FeedbackPage />
-
-      {/* Pre Registration */}
 
       <PreRegisterPage />
 
-      {/* Suggestion */}
       <SuggestionPage/>
 
       <Footer />

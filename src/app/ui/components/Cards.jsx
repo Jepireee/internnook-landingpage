@@ -5,7 +5,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "700"] });
 export default function Cards({ img, title, description }) {
   return (
     <div
-      className={`w-56 bg-[#7AAADD]/[0.11] backdrop-blur-lg rounded-md flex flex-col items-center justify-center text-center px-6 py-8 gap-5 text-[#2F2F2F] shadow-lg transition-all duration-300 ease-in-out transform hover:bg-[#F96D22] hover:text-blue-600 hover:scale-105 hover:-translate-y-2 hover:shadow-xl ${poppins.className}`}
+      className={`w-56 bg-[#7AAADD]/[0.11] backdrop-blur-lg rounded-md flex flex-col items-center justify-center text-center px-6 py-8 gap-5 text-[#2F2F2F] shadow-lg transition-all duration-300 ease-in-out transform hover:text-blue-600 hover:scale-105 hover:-translate-y-2 hover:shadow-xl ${poppins.className}`}
     >
       <img src={`/images/${img}`} alt="" />
       <div className="flex flex-col items-center">

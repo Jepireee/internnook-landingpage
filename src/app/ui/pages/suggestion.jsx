@@ -3,10 +3,17 @@ import Image from "next/image";
 import { useState } from "react";
 import { Poppins } from "next/font/google";
 
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const poppins = Poppins({ subsets: ["latin"], weight: ["400","500"] });
 
 export default function SuggestionPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { once: true, amount: 0.3 });
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -68,16 +75,23 @@ export default function SuggestionPage() {
             </button>
           </form>
         </div>
-        <div className="flex justify-center lg:justify-end">
-          <Image
-            src="/images/IMG_5.JPG"
-            alt="Students Working"
-            width={500}
-            height={350}
-            quality={100}
-            className="rounded-2xl shadow-md w-full max-w-lg"
-          />
-        </div>
+        <motion.div
+          ref={imageRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="py-20 flex flex-col md:flex-row items-start">
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/images/IMG_5.JPG"
+              alt="Students Working"
+              width={500}
+              height={350}
+              quality={100}
+              className="rounded-2xl shadow-md w-full max-w-lg"
+            />
+          </div>
+        </motion.div>
       </div>
       {/* Modal */}
       {isSubmitted && (
